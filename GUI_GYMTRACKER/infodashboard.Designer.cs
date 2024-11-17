@@ -1,6 +1,6 @@
 ﻿namespace GUI_GYMTRACKER
 {
-    partial class HomeDashboard
+    partial class infodashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            homelabel = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
-            // homelabel
+            // label1
             // 
-            homelabel.AutoSize = true;
-            homelabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            homelabel.ForeColor = SystemColors.ButtonHighlight;
-            homelabel.Location = new Point(308, 256);
-            homelabel.Name = "homelabel";
-            homelabel.Size = new Size(83, 32);
-            homelabel.TabIndex = 1;
-            homelabel.Text = "HOME";
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(354, 212);
+            label1.Name = "label1";
+            label1.Size = new Size(74, 24);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
-            // HomeDashboard
+            // infodashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(803, 477);
-            Controls.Add(homelabel);
+            ClientSize = new Size(787, 438);
+            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "HomeDashboard";
-            Text = "HomeDashboard";
+            Name = "infodashboard";
+            Text = "infodashboard";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label homelabel;
+        private Label label1;
     }
 }

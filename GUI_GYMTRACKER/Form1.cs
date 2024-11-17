@@ -69,7 +69,17 @@ namespace GUI_GYMTRACKER
             
             panel3.Height = button3.Height;
             panel3.Top = button3.Top;
-            
+            this.homepanel.Controls.Clear();
+
+           infodashboard Infodashboard = new infodashboard
+           {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true,
+                FormBorderStyle = FormBorderStyle.None
+            };
+            this.homepanel.Controls.Add(Infodashboard);
+            Infodashboard.Show();
         }
     }
 }
