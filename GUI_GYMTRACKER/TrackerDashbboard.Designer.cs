@@ -28,19 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(321, 277);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 32);
-            label1.TabIndex = 0;
-            label1.Text = "TRACKER";
             // 
             // TrackerDashbboard
             // 
@@ -48,16 +36,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Honeydew;
             ClientSize = new Size(803, 477);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TrackerDashbboard";
             Text = "TrackerDashbboard";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
     }
 }
