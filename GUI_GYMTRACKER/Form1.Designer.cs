@@ -35,10 +35,12 @@
             button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             homepanel = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -109,13 +111,23 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(224, 224, 224);
+            panel2.BackColor = SystemColors.GradientInactiveCaption;
+            panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(202, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(803, 78);
             panel2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(276, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(62, 304);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -129,6 +141,7 @@
             // 
             // homepanel
             // 
+            homepanel.BackColor = Color.Honeydew;
             homepanel.Dock = DockStyle.Bottom;
             homepanel.Location = new Point(202, 79);
             homepanel.Name = "homepanel";
@@ -148,6 +161,7 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -161,5 +175,6 @@
         private Button button1;
         private Panel panel3;
         private Panel homepanel;
+        private PictureBox pictureBox1;
     }
 }

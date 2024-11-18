@@ -16,5 +16,15 @@ namespace GUI_GYMTRACKER
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.calculator.net/bmi-calculator.html";
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true 
+            });
+        }
     }
 }
