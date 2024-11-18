@@ -87,8 +87,87 @@ namespace GUI_GYMTRACKER.Repositories
 
         public void CreateTrainee(Trainee trainee)
         {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string sql = "INSERT INTO Trainees " +
+                                 "(Name, Email, Program, AppointmentDate) VALUES" +
+                                 "(@Name, @Email, @Program, @AppointmentDate);";
 
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", trainee.Name);
+                        command.Parameters.AddWithValue("@Email", trainee.Email);
+                        command.Parameters.AddWithValue("Program", trainee.Program);
+                        command.Parameters.AddWithValue("AppointmentDate", trainee.AppointmentDate);
+                        command.ExecuteNonQuery();
+
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.ToString());
+            }
         }
 
+        public void  UpdateTrainee (Trainee trainee)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string sql = "UPDATE Trainees" +
+                        "SET Name = @Name, Email = @Email, " +
+                        "Program = @Program, AppointmentDate = @AppointmentDate" +
+                        "WHERE id =@id";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", trainee.Name);
+                        command.Parameters.AddWithValue("@Email", trainee.Email);
+                        command.Parameters.AddWithValue("Program", trainee.Program);
+                        command.Parameters.AddWithValue("AppointmentDate", trainee.AppointmentDate);
+                        command.ExecuteNonQuery();
+
+
+
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.ToString());
+
+
+            }
+        }
+
+        public void DeleteTrainee(int id)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string sql = "DELETE FROM Trainee WHERE id=@id";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", id);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.ToString());
+            }
+        }
     }
 } 
