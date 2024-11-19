@@ -23,8 +23,13 @@ namespace GUI_GYMTRACKER
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
             {
                 FileName = url,
-                UseShellExecute = true 
+                UseShellExecute = true
             });
+        }
+
+        private void HomeDashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

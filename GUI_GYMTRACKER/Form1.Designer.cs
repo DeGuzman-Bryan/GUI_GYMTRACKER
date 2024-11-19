@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(88, 129, 87);
+            panel1.BackColor = Color.FromArgb(39, 40, 41);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
@@ -111,7 +111,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(163, 177, 138);
+            panel2.BackColor = Color.FromArgb(97, 103, 122);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
@@ -132,16 +132,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Charlemagne Std", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(224, 224, 224);
             label1.Location = new Point(333, 27);
             label1.Name = "label1";
-            label1.Size = new Size(213, 25);
+            label1.Size = new Size(248, 25);
             label1.TabIndex = 2;
             label1.Text = "GYM INFO TRACKER";
             // 
             // homepanel
             // 
-            homepanel.BackColor = Color.FromArgb(218, 215, 205);
+            homepanel.BackColor = Color.FromArgb(216, 217, 218);
             homepanel.Dock = DockStyle.Bottom;
             homepanel.Location = new Point(202, 79);
             homepanel.Name = "homepanel";
