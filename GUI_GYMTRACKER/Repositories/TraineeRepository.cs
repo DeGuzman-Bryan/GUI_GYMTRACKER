@@ -92,28 +92,45 @@ namespace GUI_GYMTRACKER.Repositories
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO Trainees " +
-                                 "(Name, Email, Program, AppointmentDate) VALUES" +
-                                 "(@Name, @Email, @Program, @AppointmentDate);";
+
+                    string checkSql = "SELECT COUNT(1) FROM Trainees WHERE Email = @Email";
+                    using (SqlCommand checkCommand = new SqlCommand(checkSql, connection))
+                    {
+                        checkCommand.Parameters.AddWithValue("@Email", trainee.Email);
+                        int exists = (int)checkCommand.ExecuteScalar();
+
+                        if (exists > 0)
+                        {
+                            Console.WriteLine("A trainee with this email already exists.");
+                            return; 
+                        }
+                    }
+
+                  
+                    string sql = @"INSERT INTO Trainees (Name, Email, Program, AppointmentDate) 
+                           VALUES (@Name, @Email, @Program, @AppointmentDate);";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@Name", trainee.Name);
                         command.Parameters.AddWithValue("@Email", trainee.Email);
-                        command.Parameters.AddWithValue("Program", trainee.Program);
-                        command.Parameters.AddWithValue("AppointmentDate", trainee.AppointmentDate);
+                        command.Parameters.AddWithValue("@Program", trainee.Program);
+                        command.Parameters.AddWithValue("@AppointmentDate", trainee.AppointmentDate);
+
                         command.ExecuteNonQuery();
-
-
-
                     }
                 }
             }
+            catch (SqlException ex) when (ex.Number == 2627) 
+            {
+                Console.WriteLine("A trainee with the same email already exists.");
+            }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception: " + ex.ToString());
+                Console.WriteLine("An error occurred while creating the trainee: " + ex.Message);
             }
         }
+
 
         public void  UpdateTrainee (Trainee trainee)
         {
