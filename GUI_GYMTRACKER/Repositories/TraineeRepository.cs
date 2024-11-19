@@ -122,7 +122,7 @@ namespace GUI_GYMTRACKER.Repositories
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "UPDATE Trainees SET Name = @Name, Email = @Email, Program = @Program, AppointmentDate = @AppointmentDat WHERE id =@id";
+                    string sql = "UPDATE Trainees SET Name = @Name, Email = @Email, Program = @Program, AppointmentDate = @AppointmentDate WHERE id = @id";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -133,8 +133,6 @@ namespace GUI_GYMTRACKER.Repositories
                         command.Parameters.AddWithValue("@id", trainee.id);
                         command.ExecuteNonQuery();
 
-
-
                     }
                 }
             }
@@ -143,7 +141,7 @@ namespace GUI_GYMTRACKER.Repositories
                 Console.WriteLine("Exception: " + ex.ToString());
 
 
-            }
+            }    
         }
 
         public void DeleteTrainee(int id)
