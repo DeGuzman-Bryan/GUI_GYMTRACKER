@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(0, 64, 64);
+            panel1.BackColor = Color.FromArgb(88, 129, 87);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
@@ -111,7 +111,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.GradientInactiveCaption;
+            panel2.BackColor = Color.FromArgb(163, 177, 138);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
@@ -141,7 +141,7 @@
             // 
             // homepanel
             // 
-            homepanel.BackColor = Color.Honeydew;
+            homepanel.BackColor = Color.FromArgb(218, 215, 205);
             homepanel.Dock = DockStyle.Bottom;
             homepanel.Location = new Point(202, 79);
             homepanel.Name = "homepanel";

@@ -46,7 +46,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Honeydew;
+            BackColor = Color.FromArgb(218, 215, 205);
             ClientSize = new Size(803, 477);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
