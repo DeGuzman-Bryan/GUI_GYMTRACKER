@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI_GYMTRACKER
 {
-    public partial class infodashboard : Form
+    public partial class CreateEditForms : Form
     {
-        public infodashboard()
+        public CreateEditForms()
         {
             InitializeComponent();
-        }
-
-        private void infodashboard_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
