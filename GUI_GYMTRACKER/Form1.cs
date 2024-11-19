@@ -53,7 +53,7 @@ namespace GUI_GYMTRACKER
 
             
             this.homepanel.Controls.Clear();
-            Trackerdashboard trackerDashbboard = new Trackerdashboard
+            TrackerDashboard trackerDashbboard = new TrackerDashboard
             {
                 Dock = DockStyle.Fill,
                 TopLevel = false,
