@@ -15,9 +15,6 @@ namespace GUI_GYMTRACKER.Models
         public string Program = "";
         public string AppointmentDate = "";
 
-        internal static void Add(Trainee trainee1)
-        {
-            throw new NotImplementedException();
-        }
+       
     } 
 }
