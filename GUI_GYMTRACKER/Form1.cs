@@ -10,10 +10,10 @@ namespace GUI_GYMTRACKER
 
         private void InitializeDashboard()
         {
-            
+
             panel3.Height = button1.Height;
 
-          
+
             this.homepanel.Controls.Clear();
             HomeDashboard homeDashboard = new HomeDashboard
             {
@@ -23,12 +23,12 @@ namespace GUI_GYMTRACKER
                 FormBorderStyle = FormBorderStyle.None
             };
             this.homepanel.Controls.Add(homeDashboard);
-            homeDashboard.Show(); 
+            homeDashboard.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             panel3.Height = button1.Height;
             panel3.Top = button1.Top;
 
@@ -47,11 +47,11 @@ namespace GUI_GYMTRACKER
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             panel3.Height = button2.Height;
             panel3.Top = button2.Top;
 
-            
+
             this.homepanel.Controls.Clear();
             TrackerDashboard trackerDashbboard = new TrackerDashboard
             {
@@ -61,18 +61,18 @@ namespace GUI_GYMTRACKER
                 FormBorderStyle = FormBorderStyle.None
             };
             this.homepanel.Controls.Add(trackerDashbboard);
-            trackerDashbboard.Show(); 
+            trackerDashbboard.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             panel3.Height = button3.Height;
             panel3.Top = button3.Top;
             this.homepanel.Controls.Clear();
 
-           infodashboard Infodashboard = new infodashboard
-           {
+            infodashboard Infodashboard = new infodashboard
+            {
                 Dock = DockStyle.Fill,
                 TopLevel = false,
                 TopMost = true,
@@ -80,6 +80,11 @@ namespace GUI_GYMTRACKER
             };
             this.homepanel.Controls.Add(Infodashboard);
             Infodashboard.Show();
+        }
+
+        private void homepanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

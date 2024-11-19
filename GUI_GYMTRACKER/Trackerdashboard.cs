@@ -18,6 +18,7 @@ namespace GUI_GYMTRACKER
             InitializeComponent();
             ReadTrainees();
         }
+
         private void ReadTrainees()
         {
             DataTable dataTable = new DataTable();
@@ -43,11 +44,57 @@ namespace GUI_GYMTRACKER
                 dataTable.Rows.Add(row);
 
             }
-            this.dataGridView1.DataSource = dataTable;
 
+            this.traineesTable.DataSource = dataTable;
 
         }
 
- 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CreateEditForm form = new CreateEditForm();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                ReadTrainees();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var val = this.traineesTable.SelectedRows[0].Cells[0].Value.ToString();
+            if (val == null || val.Length == 0) return;
+            int traineeId = int.Parse(val);
+
+            var repo = new TraineeRepository();
+            var trainee = repo.GetTrainee(traineeId);
+
+            if (trainee == null) return;
+
+            CreateEditForm form = new CreateEditForm();
+            form.EditTrainee(trainee);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                ReadTrainees();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var val = this.traineesTable.SelectedRows[0].Cells[0].Value.ToString();
+            if (val == null || val.Length == 0) return;
+            int traineeId = int.Parse(val);
+
+            DialogResult dialogResult =
+                MessageBox.Show("Are you sure you want to delete the trainee?",
+                "Delete Client", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+
+            var repo = new TraineeRepository();
+            repo.DeleteTrainee(traineeId);
+            ReadTrainees() ;
+        }
     }
 }

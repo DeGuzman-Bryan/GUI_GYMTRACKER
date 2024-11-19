@@ -148,6 +148,7 @@
             homepanel.Name = "homepanel";
             homepanel.Size = new Size(803, 477);
             homepanel.TabIndex = 2;
+            homepanel.Paint += homepanel_Paint;
             // 
             // Form1
             // 
