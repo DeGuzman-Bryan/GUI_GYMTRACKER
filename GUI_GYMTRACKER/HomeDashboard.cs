@@ -28,4 +28,4 @@ namespace GUI_GYMTRACKER
         }
     }
 }
- //new design color
+ //changed color
