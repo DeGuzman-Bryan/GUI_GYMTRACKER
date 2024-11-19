@@ -16,6 +16,7 @@ namespace GUI_GYMTRACKER
         public TrackerDashboard()
         {
             InitializeComponent();
+            ReadTrainees();
         }
         private void ReadTrainees()
         {
@@ -42,6 +43,11 @@ namespace GUI_GYMTRACKER
                 dataTable.Rows.Add(row);
 
             }
+            this.dataGridView1.DataSource = dataTable;
+
+
         }
+
+ 
     }
 }
