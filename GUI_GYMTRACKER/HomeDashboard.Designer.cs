@@ -32,7 +32,9 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             button1 = new Button();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -47,18 +49,19 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Letter Gothic Std", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Letter Gothic Std", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(426, 270);
+            label1.Location = new Point(429, 261);
             label1.Name = "label1";
-            label1.Size = new Size(265, 87);
+            label1.Size = new Size(315, 232);
             label1.TabIndex = 3;
-            label1.Text = "CHECK YOUR\r\nBMI NOW\r\nAVAILABLE FOR FREE\r\n";
+            label1.Text = "CHECK YOUR\r\n BMI NOW\r\n\r\n\r\n";
             // 
             // button1
             // 
-            button1.BackColor = Color.Gold;
+            button1.BackColor = Color.FromArgb(97, 103, 122);
             button1.Font = new Font("Letter Gothic Std", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
             button1.Location = new Point(92, 393);
             button1.Name = "button1";
             button1.Size = new Size(306, 53);
@@ -67,12 +70,22 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(510, 27);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(252, 218);
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
             // HomeDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(216, 217, 218);
             ClientSize = new Size(803, 477);
+            Controls.Add(pictureBox2);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -81,6 +94,7 @@
             Text = "HomeDashboard";
             Load += HomeDashboard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -89,5 +103,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Button button1;
+        private PictureBox pictureBox2;
     }
 }
