@@ -11,13 +11,12 @@ using System.Windows.Forms;
 
 namespace GUI_GYMTRACKER
 {
-    public partial class Trackerdashboard : Form
+    public partial class TrackerDashboard : Form
     {
-        public Trackerdashboard()
+        public TrackerDashboard()
         {
             InitializeComponent();
         }
-
         private void ReadTrainees()
         {
             DataTable dataTable = new DataTable();
