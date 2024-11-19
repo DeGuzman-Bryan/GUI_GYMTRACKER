@@ -19,5 +19,5 @@ namespace GUI_GYMTRACKER.Models
         {
             throw new NotImplementedException();
         }
-    }
+    } 
 }
