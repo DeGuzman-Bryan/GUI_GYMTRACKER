@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace GUI_GYMTRACKER
 {
-    public partial class TrackerDashbboard : Form
+    public partial class Trackerdashboard : Form
     {
-        public TrackerDashbboard()
+        public Trackerdashboard()
         {
             InitializeComponent();
         }

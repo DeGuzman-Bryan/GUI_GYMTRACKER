@@ -71,7 +71,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Honeydew;
+            BackColor = Color.FromArgb(216, 217, 218);
             ClientSize = new Size(803, 477);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -79,6 +79,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "HomeDashboard";
             Text = "HomeDashboard";
+            Load += HomeDashboard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
