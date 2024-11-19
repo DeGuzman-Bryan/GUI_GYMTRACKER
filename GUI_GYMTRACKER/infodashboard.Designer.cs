@@ -47,7 +47,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Honeydew;
-            ClientSize = new Size(787, 438);
+            ClientSize = new Size(803, 477);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "infodashboard";
