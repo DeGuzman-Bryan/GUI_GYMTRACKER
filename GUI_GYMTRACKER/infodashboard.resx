@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>A system like this can be developed using technologies 
+such as web development frameworks, mobile apps,
+and databases to store client data and appointment details. 
+It also improves the relationship between gym staff and clients, 
+enhancing the overall management of appointments and tracking progress.</value>
+  </data>
 </root>

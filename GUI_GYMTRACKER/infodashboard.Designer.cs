@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(infodashboard));
             label1 = new Label();
             SuspendLayout();
             // 
@@ -36,11 +37,12 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(354, 212);
+            label1.Location = new Point(12, 191);
             label1.Name = "label1";
-            label1.Size = new Size(74, 24);
+            label1.Size = new Size(794, 120);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = resources.GetString("label1.Text");
+            label1.Click += label1_Click;
             // 
             // infodashboard
             // 
